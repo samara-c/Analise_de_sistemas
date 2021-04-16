@@ -32,12 +32,14 @@ public class UsuarioModel {
 	
 	private String estado; 
 	
+	private String email;
+	
 	public UsuarioModel(){
 		
 		System.out.println("Passei " + LocalDate.now());
 	}
 	
-	public UsuarioModel(Long codigo, String nome, String login, String senha, boolean ativo, List<Long> grupos, String dataNasc, String cidade, String estado) {
+	public UsuarioModel(Long codigo, String nome, String login, String senha, boolean ativo, List<Long> grupos, String dataNasc, String cidade, String estado, String email) {
 		super();
 		this.codigo = codigo;
 		this.nome = nome;
@@ -48,6 +50,7 @@ public class UsuarioModel {
 		this.dataNasc = dataNasc;
 		this.cidade = cidade;
 		this.estado = estado;
+		this.email = email;
 	}	
 	
 	public Long getCodigo() {		
@@ -120,6 +123,14 @@ public class UsuarioModel {
 
 	public void setEstado(String estado) {
 		this.estado = estado;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	
 	

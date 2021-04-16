@@ -70,6 +70,31 @@
 		 </div>
 	 </li>
 	 
+
+	 <li class="mdl-list__item">			 		  
+		 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+		   <input class="mdl-textfield__input" type="text" id="input-cidade" th:field="*{cidade}" onfocus="limparMensagem()"/>
+		   <label class="mdl-textfield__label" for="input-cidade">Cidade...</label>
+		   <p th:if="${#fields.hasErrors('cidade')}" th:errors="*{cidade}" class="erro-msg">...</p>
+		 </div>
+	 </li>
+	 						 
+	 <li class="mdl-list__item">			 		  
+		 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+		   <input class="mdl-textfield__input" type="text" id="input-estado" th:field="*{estado}" onfocus="limparMensagem()"/>
+		   <label class="mdl-textfield__label" for="input-cidade">Estado...</label>
+		   <p th:if="${#fields.hasErrors('estado')}" th:errors="*{estado}" class="erro-msg">...</p>
+		 </div>
+	 </li>
+	 						 
+	 <li class="mdl-list__item">			 		  
+		 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+		   <input class="mdl-textfield__input" type="text" id="input-email" th:field="*{email}" onfocus="limparMensagem()"/>
+		   <label class="mdl-textfield__label" for="input-cidade">Email...</label>
+		   <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="erro-msg">...</p>
+		 </div>
+	 </li>
+	 						 
 	 <li class="mdl-list__item">
 	 						 	 
 	 	<table>

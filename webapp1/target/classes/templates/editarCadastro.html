@@ -70,7 +70,31 @@
 							   <label class="mdl-textfield__label" for="input-senha">Senha...</label>							   
 							 </div>
 						 </li>
-						 
+
+						 <li class="mdl-list__item">			 		  
+							 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							   <input class="mdl-textfield__input" type="text" id="input-cidade" th:field="*{cidade}" onfocus="limparMensagem()"/>
+							   <label class="mdl-textfield__label" for="input-cidade">Cidade...</label>
+							   <p th:if="${#fields.hasErrors('cidade')}" th:errors="*{cidade}" class="erro-msg">...</p>
+							 </div>
+						 </li>
+						 						 
+						 <li class="mdl-list__item">			 		  
+							 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							   <input class="mdl-textfield__input" type="text" id="input-estado" th:field="*{estado}" onfocus="limparMensagem()"/>
+							   <label class="mdl-textfield__label" for="input-cidade">Estado...</label>
+							   <p th:if="${#fields.hasErrors('estado')}" th:errors="*{estado}" class="erro-msg">...</p>
+							 </div>
+						 </li>
+						 						 
+						 <li class="mdl-list__item">			 		  
+							 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							   <input class="mdl-textfield__input" type="text" id="input-email" th:field="*{email}" onfocus="limparMensagem()"/>
+							   <label class="mdl-textfield__label" for="input-cidade">Email...</label>
+							   <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="erro-msg">...</p>
+							 </div>
+						 </li>
+						 						 
 						 <li class="mdl-list__item">
 							<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-ativo">
 							  <input type="checkbox" id="checkbox-ativo" class="mdl-checkbox__input" name="ativo" th:checked="*{ativo}"/>

@@ -14,7 +14,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-@Table(name="tb_grupo", schema="sistema")
+@Table(name="tb_grupo", schema="avaliacao")
 @Entity
 public class GrupoEntity implements Serializable {
 	

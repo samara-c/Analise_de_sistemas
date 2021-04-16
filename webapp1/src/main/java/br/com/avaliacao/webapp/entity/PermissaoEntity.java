@@ -13,7 +13,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-@Table(name="tb_permissao", schema="sistema")
+@Table(name="tb_permissao", schema="avaliacao")
 @Entity
 public class PermissaoEntity implements Serializable {
 	

@@ -50,6 +50,9 @@ public class UsuarioEntity implements Serializable {
 	@Column(name="ds_dataNasc")
 	private String dataNasc;
 	
+	@Column(name="ds_email")
+	private String email;
+	
 		
     @JoinTable(name = "TB_USUARIO_X_GRUPO", 
     		joinColumns = {@JoinColumn(name = "ID_USUARIO", referencedColumnName = "ID_USUARIO")}, 
@@ -129,5 +132,13 @@ public class UsuarioEntity implements Serializable {
 	
 	public void setDataNasc(String dataNasc) {
 		this.dataNasc = dataNasc;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 }

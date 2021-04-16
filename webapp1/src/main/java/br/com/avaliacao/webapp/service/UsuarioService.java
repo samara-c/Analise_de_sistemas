@@ -103,7 +103,10 @@ public class UsuarioService  implements UserDetailsService {
 		
 		/*NOME DO USUÁRIO A SER SALVO*/
 		usuarioEntity.setNome(usuarioModel.getNome());
-		
+		usuarioEntity.setCidade(usuarioModel.getCidade());
+		usuarioEntity.setEstado(usuarioModel.getEstado());
+		usuarioEntity.setEmail(usuarioModel.getEmail());
+
 		/*CRIPTOGRAMA E INFORMA A SENHA*/
 		usuarioEntity.setSenha(new BCryptPasswordEncoder().encode(usuarioModel.getSenha()));
 
@@ -152,7 +155,8 @@ public class UsuarioService  implements UserDetailsService {
 							null,
 							usuarioEntity.getDataNasc(),
 							usuarioEntity.getCidade(),
-							usuarioEntity.getEstado()
+							usuarioEntity.getEstado(),
+							usuarioEntity.getEmail()
 							));
 		});
 		
@@ -185,7 +189,18 @@ public class UsuarioService  implements UserDetailsService {
 			
 		}); 
 		
-		return new UsuarioModel();
+		//return new UsuarioModel();
+		return new UsuarioModel(
+				usuarioEntity.getCodigo(),
+				usuarioEntity.getNome(),
+				usuarioEntity.getLogin(),
+				null,
+				usuarioEntity.isAtivo(),
+				grupos, 
+				usuarioEntity.getDataNasc(),
+				usuarioEntity.getCidade(),
+				usuarioEntity.getEstado(),
+				usuarioEntity.getEmail());
 		
 	}
 	
@@ -204,6 +219,9 @@ public class UsuarioService  implements UserDetailsService {
 		
 		/*NOME DO USUÁRIO A SER SALVO*/
 		usuarioEntity.setNome(usuarioModel.getNome());
+		usuarioEntity.setCidade(usuarioModel.getCidade());
+		usuarioEntity.setEstado(usuarioModel.getEstado());
+		usuarioEntity.setEmail(usuarioModel.getEmail());
 		
 		/*CRIPTOGRAMA E INFORMA A SENHA*/
 		if(!StringUtils.isEmpty(usuarioModel.getSenha()))
